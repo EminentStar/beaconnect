@@ -1,0 +1,61 @@
+﻿<Page x:Class="beaConnect_mobile.Views.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:beaConnect_mobile.Views"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d">
+
+    <Grid x:Name="mainGrid" Background="#FFFFFF">
+        <StackPanel x:Name="sp_main">
+
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/Assets/Main.png"></ImageBrush>
+            </StackPanel.Background>
+
+            <StackPanel Background="#9d9d9c">
+                <TextBlock Text="     BeaConnect "
+                       FontSize="30"
+                       FontWeight="Light"
+                       Foreground="#FFFFFF"
+                       HorizontalAlignment="Left"
+                       VerticalAlignment="Center" FontFamily="Assets/Applemint.ttf" Width="194"  />
+            </StackPanel>
+            <StackPanel x:Name="mainPanel" Background="Transparent">
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,5,0,0" >
+                    <TextBlock x:Name="fmanName" Text=""
+            		FontSize="15"
+            		FontWeight="Light"
+            		Foreground="#9E9388"
+            		HorizontalAlignment="Right"
+            		VerticalAlignment="Center" 
+                    Width="50" 
+                    FontFamily="Assets/Applemint.ttf"/>
+                    <TextBlock Text=" 대원"
+                	FontSize="15"
+                	FontWeight="Light"
+                	Foreground="#9E9388"
+                	HorizontalAlignment="Right"
+                	VerticalAlignment="Center" 
+                    FontFamily="Assets/Applemint.ttf"/>
+                </StackPanel>
+
+                <ToggleButton x:Name="rescue_mode" 
+                              FontSize="1" 
+                              Foreground="White" 
+                              Background="#9E9388" 
+                              Content="" 
+                              HorizontalAlignment="Center" 
+                              VerticalAlignment="Center" 
+                              Height="160" 
+                              Width="160" 
+                              Margin="0,110,0,0" 
+                              Checked="rescue_mode_Checked" Style="{StaticResource MyToggleButtonStyle}" Unchecked="rescue_mode_Unchecked"
+                              >
+                </ToggleButton>
+                <TextBlock x:Name="tb_onoff" TextWrapping="Wrap" Text="OFF" HorizontalAlignment="Center" FontSize="32" Foreground="#9d9d9c" Margin="0,30,0,0" />
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Page>
